@@ -14,11 +14,13 @@ body {
   color: #f57754;
   white-space: pre-line;
   text-shadow: 2px 2px 4px rgba(235, 90, 0, 0.5);
+  margin-top: 10px;
 }
 
 .title-container{
   background-color: rgba(255, 255, 255, 0.6);
   height: 100px;
+  border: 1px solid transparent;
 }
 
 .titlefundo {
@@ -40,6 +42,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 90vh;
 }
 
 .right-container {
@@ -161,17 +164,15 @@ body {
 
 .resultado-text {
   position: absolute;
-  top: 40%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  display: block; /* Alteração aqui */
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   font-size: 24px;
   color: #f57754;
   text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
-  z-index: 1;
+  padding: 20px;
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .calculate-button{
@@ -218,15 +219,19 @@ input[type="number"]::-webkit-outer-spin-button {
   display: block;
 }
 .show-result-text-number{
-  display: inline-block;
-  width: 50px;
-  height: 50px;
+  position: absolute;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+  padding: 20px;
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
   background-color: #f57754;
-  color: white;
-  font-size: 30px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 45px;
-  margin-right: 10px;
-  margin-top: 100px;
+  border-radius: 50px;
+  height: 20px;
+  width: 20px;
 }
