@@ -161,7 +161,7 @@ body {
 
 .resultado-text {
   position: absolute;
-  top: 55%;
+  top: 40%;
   left: 30%;
   transform: translate(-50%, -50%);
   display: block; /* Alteração aqui */
