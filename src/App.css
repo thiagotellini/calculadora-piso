@@ -1,38 +1,232 @@
-.App {
+body {
+  background-image: url("./assets/fundo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.app {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  color: #f57754;
+  white-space: pre-line;
+  text-shadow: 2px 2px 4px rgba(235, 90, 0, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title-container{
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.titlefundo {
+  color: #f57754;
+  margin-top: -108px;
+  margin-left: 5px;
+}
+
+.container {
+  display: flex;
+}
+
+.left-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  
+  flex: 0.6;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.right-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.input-container input[type="number"],
+.input-container input[type="text"] {
+  width: 80px;
+  height: 30px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.input-container input[type="number"]:focus,
+.input-container input[type="text"]:focus {
+  outline: none;
+  opacity: 1;
+}
+
+.input-operator {
+  margin: 0 10px;
+}
+
+.circle-orange1 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #f57754;
   color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 8px;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.circle-orange2 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #f57754;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 10px;
+  margin-top: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.circle-orange3 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #f57754;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+
+.label-text {
+  color: #045bb9;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.label-text2 {
+  color: #045bb9;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 2px;
+}
+
+.label-text3 {
+  color: #045bb9;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 65px;
+}
+
+.label-text4 {
+  color: #045bb9;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 45px;
+}
+
+.label-text5 {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.resultado-text {
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  display: block; /* Alteração aqui */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  color: #f57754;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.5);
+  z-index: 1;
+}
+
+.calculate-button{
+  margin-top: 60px;
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #f57754;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  
+}
+.calculate-button:hover {
+  background-color: #ff8f6e;
+}
+
+.calculate-button:active {
+  background-color: #d44529;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 37%;
+  left: 94%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: rgba(212, 69, 41, 0.7);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.label-text2:hover ~ .tooltip {
+  display: block;
+}
+.show-result-text-number{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #f57754;
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  margin-right: 10px;
+  margin-top: 100px;
 }
