@@ -4,6 +4,7 @@ import animationData from './animations/resize.json';
 import { FiInfo } from 'react-icons/fi';
 import './App.css';
 
+document.title = "Calculadora de Piso";
 const App = () => {
   const lottieContainerRef = useRef(null);
   const [area1, setArea1] = useState('');
