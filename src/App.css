@@ -15,13 +15,14 @@ body {
   color: #f57754;
   white-space: pre-line;
   text-shadow: 2px 2px 4px rgba(235, 90, 0, 0.5);
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .title-container {
   background-color: rgba(255, 255, 255, 0.6);
   height: 100px;
   border: 1px solid transparent;
+  min-width: 106.5vh;
 }
 
 .titlefundo {
@@ -44,6 +45,7 @@ body {
   justify-content: center;
   min-height: 90vh;
   position: relative;
+  width: 100vh;
 }
 
 .right-container {
@@ -54,6 +56,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100vh;
 }
 
 .input-container {
@@ -238,7 +241,9 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .left-container,
   .right-container {
-    height: auto;
+    flex-basis: 100%; /* Adicionado */
+    flex-grow: 1; /* Adicionado */
+    min-height: auto; /* Alterado */
   }
 
   .resultado-text {
