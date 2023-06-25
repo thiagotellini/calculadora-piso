@@ -109,7 +109,7 @@ const App = () => {
           {totalQuantity && (
             <h2 className="resultado-text show-result-text">
               Arredondando para cima <br />
-              a quantidade de Pisos é: <br />
+              a quantidade de <br />pisos necessário é de: <br />
               
             </h2>
           )}
