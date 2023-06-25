@@ -197,6 +197,7 @@ const App = () => {
               value={totalArea}
               onChange={(e) => setTotalArea(e.target.value)}
               onBlur={handleCalculateTotalPieces}
+              readOnly
             />
             <span className="input-operator">/</span>
             <input
@@ -205,6 +206,7 @@ const App = () => {
               value={totalPieceArea}
               onChange={(e) => setTotalPieceArea(e.target.value)}
               onBlur={handleCalculateTotalPieces}
+              readOnly
             />
             <span className="input-operator">=</span>
             <input type="text" placeholder="Quantidade necessária" value={totalQuantity} readOnly />
@@ -222,14 +224,15 @@ const App = () => {
               value={totalQuantity}
               onChange={(e) => setLossPercentage(e.target.value)}
               onBlur={handleCalculateLoss}
+              readOnly
             />
             <span className="input-operator">+</span>
             <input
               type="number"
-              placeholder="Quantidade"
-              value={totalPieceArea}
+              placeholder="10%"
+              value="10%"
               readOnly
-            />
+            /> 
             <span className="input-operator">=</span>
             <input
               type="text"
